@@ -66,6 +66,11 @@ img {
     font-family: DancingScript-VariableFont_wght;
     src: url("/font/DancingScript-VariableFont_wght.ttf");
 }
+@font-face {
+    font-family: SueEllenFrancisco-Regular;
+    src: url("/font/SueEllenFrancisco-Regular.ttf");
+}
+
 h1 {
     font-size: 2em;
     margin: 0.67em 0;
@@ -104,6 +109,7 @@ pre {
 
 a {
     background-color: transparent;
+    font-size: 20px;
 }
 
 /**
@@ -127,7 +133,7 @@ strong {
 }
 
 p {
-    font-size: 20px;
+    font-size: 18px;
 }
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.

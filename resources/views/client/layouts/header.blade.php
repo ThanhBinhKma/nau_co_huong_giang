@@ -32,10 +32,6 @@
     </div>
     <div class="container-fluid header-main-master">
         <nav class="navbar navbar-expand-lg navbar-light header-main">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto d-flex w-100 justify-content-end align-item-center">
@@ -46,8 +42,7 @@
                     </li>
                     <li class="fl-gr-1"></li>
                     <li class="nav-item header-li-active">
-                        <a class="nav-link" href="{{ route('client.home') }}">Trang chủ <span
-                                class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="{{ route('client.home') }}">Trang chủ</a>
                     </li>
                     <li class="nav-item header-li-about-active">
                         <a class="nav-link" href="{{ route('client.about') }}">Giới thiệu</a>
@@ -102,7 +97,7 @@
         </div>
     </div>
 </header>
-<div class="header-mobile-humbuger text-right">
+<div class="header-mobile-humbuger text-right display-mobile">
     <span></span>
     <span></span>
     <span></span>
@@ -117,13 +112,41 @@
             <a href="">Giới thiệu</a>
         </li>
         <li>
-            <a href="javascript:void(0)">
+            <a href="javascript:void(0)" class="ann menu-menu-on-click">
                 Thực đơn cỗ
+                <span></span>
             </a>
         </li>
         <li>
-            <a href="javascript:void(0)">Dịch vụ</a>
+            <a href="javascript:void(0)" class="ann">
+                Dịch vụ
+            </a>
         </li>
-        <li><a href="">Liên hệ</a></li>
+        <li>
+            <a href="">Liên hệ
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div class="header-mobile-humbuger-sub-menu-menu">
+    <ul>
+        <li> <a class="dropdown-item" href="{{ route('client.menu') }}">Thực đơn món khai vị</a></li>
+        <li> <a class="dropdown-item" href="#">Thực đơn món chính</a></li>
+        <li>
+            <a class="dropdown-item" href="#">Thực đơn cơm</a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="#">Thực đơn canh</a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="#">Thực đơn thực đơn đồ uống</a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="#">Thực đơn món tráng miệng</a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="#">Thực đơn cỗ chay</a>
+        </li>
     </ul>
 </div>

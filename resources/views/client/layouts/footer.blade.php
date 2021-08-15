@@ -26,12 +26,13 @@
             <div class=" col-sm-6 col-md col-5 col">
                 <h2 class="headin5_amrc col_white_amrc pt2">Thực đơn cỗ</h2>
                 <ul class="footer_ul_amrc">
-                    <li><a href="http://webenlance.com">Remove Background</a></li>
-                    <li><a href="http://webenlance.com">Shadows & Mirror Reflection</a></li>
-                    <li><a href="http://webenlance.com">Logo Design</a></li>
-                    <li><a href="http://webenlance.com">Vectorization</a></li>
-                    <li><a href="http://webenlance.com">Hair Masking/Clipping</a></li>
-                    <li><a href="http://webenlance.com">Image Cropping</a></li>
+                    <li><a href="http://webenlance.com">Thực đơn món khai vị</a></li>
+                    <li><a href="http://webenlance.com">Thực đơn món chính</a></li>
+                    <li><a href="http://webenlance.com">Thực đơn cơm</a></li>
+                    <li><a href="http://webenlance.com">Thực đơn canh</a></li>
+                    <li><a href="http://webenlance.com">Thực đơn đồ uống</a></li>
+                    <li><a href="http://webenlance.com">Thực đơn món tráng miệng</a></li>
+                    <li><a href="http://webenlance.com">Thực đơn cỗ chay</a></li>
                 </ul>
             </div>
         </div>

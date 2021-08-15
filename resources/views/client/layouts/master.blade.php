@@ -49,6 +49,10 @@
             $('.header-mobile-humbuger').on('click', function() {
                 $('.header-mobile-humbuger').toggleClass('open');
                 $('.header-mobile-humbuger-menu').toggleClass('active');
+                $('.header-mobile-humbuger-sub-menu-menu').removeClass('active');
+            })
+            $('.menu-menu-on-click').on('click', function() {
+                $('.header-mobile-humbuger-sub-menu-menu').toggleClass('active');
             })
         })
     </script>

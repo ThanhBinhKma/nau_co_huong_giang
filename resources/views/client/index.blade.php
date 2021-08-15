@@ -29,19 +29,19 @@
     <div style="background-color: #e4d8c9" class="mt-4">
         <div class="container">
             <div class="row intro-service">
-                <div class="col-xl-4 col-4 col-sm-4">
+                <div class="col-xl-4 col-4 col-lg-4 col-sm-4">
                     <div>
                         <img src="{{ asset('img/icon_table.png') }}" alt="">
                     </div>
                     <p></p>
                 </div>
-                <div class="col-xl-4 col-4 col-sm-4">
+                <div class="col-xl-4 col-4 col-lg-4 col-sm-4">
                     <div>
                         <img src="{{ asset('img/icon_catering.png') }}" alt="">
                     </div>
                     <p></p>
                 </div>
-                <div class="col-xl-4  col-4 col-sm-4">
+                <div class="col-xl-4 col-lg-4 col-4 col-sm-4">
                     <img src="{{ asset('img/icon_waitress.png') }}" alt="">
                     <p></p>
                 </div>
@@ -61,7 +61,7 @@
             </div>
         </div>
         <div class="row list-img-service">
-            <div class="col-12 col-xl-6 div-outnner">
+            <div class="col-6 col-md-6 col-xl-6 col-lg-6 div-outnner">
                 <div>
                     <div class="border-img-service">
                         <img src="{{ asset('img/dat-tiec-tai-nha-mon-ngon-1.png') }}" alt="">
@@ -72,7 +72,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-xl-6 div-outnner">
+            <div class="col-6 col-md-6 col-xl-6 col-lg-6 div-outnner">
                 <div class="border-img-service">
                     <img src="{{ asset('img/dat-tiec-tai-co-quan.jpg') }}" alt="">
                 </div>
@@ -84,7 +84,7 @@
         </div>
 
         <div class="row list-img-service">
-            <div class="col-12 col-xl-6 div-outnner">
+            <div class="col-6 col-md-4 col-xl-4 col-lg-4 div-outnner">
                 <div class="border-img-service">
                     <img src="{{ asset('img/tiec-sinh-nhat.jpg') }}" alt="">
                 </div>
@@ -93,7 +93,7 @@
                     <span><i class="fas fa-arrow-right"></i></span>
                 </div>
             </div>
-            <div class="col-12 col-xl-6 div-outnner">
+            <div class="col-6 col-md-4 col-xl-4 col-lg-4 div-outnner">
                 <div class="border-img-service">
                     <img src="{{ asset('img/tiec-cuoi-2.jpg') }}" alt="">
                 </div>
@@ -102,7 +102,7 @@
                     <span><i class="fas fa-arrow-right"></i></span>
                 </div>
             </div>
-            <div class="col-12 col-xl-6 div-outnner">
+            <div class="col-6 col-md-4 col-xl-4 col-lg-4 div-outnner display-pc">
                 <div class="border-img-service">
                     <img src="{{ asset('img/tiec-tan-gia.png') }}" alt="">
                 </div>
@@ -114,7 +114,7 @@
         </div>
 
         <div class="row list-img-service">
-            <div class="col-12 col-xl-6 div-outnner">
+            <div class="col-6 col-md-6 col-lg-6 col-xl-6 div-outnner">
                 <div class="border-img-service">
                     <img src="{{ asset('img/tiec-buffet.jpg') }}" alt="">
                 </div>
@@ -123,7 +123,7 @@
                     <span><i class="fas fa-arrow-right"></i></span>
                 </div>
             </div>
-            <div class="col-12 col-xl-6 div-outnner">
+            <div class="col-6 col-md-6 col-xl-6 col-lg-6 div-outnner">
                 <div class="border-img-service">
                     <img src="{{ asset('img/giao-mon-ngon-tan-nha.jpg') }}" alt="">
                 </div>
@@ -146,7 +146,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-xl-6 dish-list">
+            <div class="col-12 col-md-6 col-lg-6 col-xl-6 dish-list">
                 <div class="img-show-dish">
                     <img src="https://brandowp.b-cdn.net/restaurant/wp-content/uploads/sites/6/2016/03/blog-post-img6.jpg.webp"
                         alt="">
@@ -158,7 +158,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-12 col-xl-6 dish-list">
+            <div class="col-12 col-md-6 col-lg-6 col-xl-6 dish-list">
                 <div class="img-show-dish">
                     <img src="https://brandowp.b-cdn.net/restaurant/wp-content/uploads/sites/6/2016/03/blog-post-img6.jpg.webp"
                         alt="">
@@ -170,7 +170,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-12 col-xl-6 dish-list">
+            <div class="col-12 col-md-6 col-lg-6 col-xl-6 dish-list">
                 <div class="img-show-dish">
                     <img src="https://brandowp.b-cdn.net/restaurant/wp-content/uploads/sites/6/2016/03/blog-post-img6.jpg.webp"
                         alt="">
@@ -182,7 +182,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-12 col-xl-6 dish-list">
+            <div class="col-12 col-md-6 col-lg-6 col-xl-6 dish-list">
                 <div class="img-show-dish">
                     <img src="https://brandowp.b-cdn.net/restaurant/wp-content/uploads/sites/6/2016/03/blog-post-img6.jpg.webp"
                         alt="">
@@ -272,7 +272,8 @@
                                 <img src="{{ asset('img/icon/dr.png') }}" class="line-title" alt="">
                             </div>
                         </div>
-                        <h2 class="font-cond-b fg-text-d lts-md fs-300 fs-300-xs no-mg" contenteditable="false">ĐÁNH GIÁ CỦA
+                        <h2 class="font-cond-b fg-text-d lts-md fs-300 fs-300-xs no-mg" style="margin-top:15px"
+                            contenteditable="false">ĐÁNH GIÁ CỦA
                             KHÁCH HÀNG</h2>
                     </div>
                     <div class="owl-carousel owl-theme text-center">

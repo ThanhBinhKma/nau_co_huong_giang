@@ -1,7 +1,7 @@
 @extends('client.layouts.master')
 @section('css')
     <style>
-        .header-li-about-active {
+        .header-li-menu-active {
             border-bottom: 3px solid #f5a60d;
         }
 
@@ -41,214 +41,33 @@
                 </div>
             </div>
             <div class="col-12 text-center text-title-index">
-                <h2>MÓN KHAI VỊ</h2>
-                <p>Món khai vị là những món ăn không thể thiếu trong mỗi thực đơn. Các món ăn khai vị ngon và đúng quy cách
-                    sẽ giúp kích thích vị giác và hệ tiêu hóa của bạn</p>
+                <h2 style="text-transform: uppercase">{{($menu->name) }}</h2>
+                <p class="mt-3">{{$menu->description}}</p>
             </div>
         </div>
+
+        @foreach ($foods as  $food)
         <div class="row list-img-service">
-            <p class="title-sub-menu">Món sup </p>
+
+            <p class="title-sub-menu">{{ $food->name }} </p>
             <div class="owl-carousel owl-theme">
+                @foreach($food->subfoods as $subfood)
                 <div class="item item-sub-menu">
                     <a href="javascript:void(0)" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img src="http://beeimg.com/images/h26180623163.jpg" alt="">
+                        <img src="{{ asset('images/' . $subfood->image) }}" alt="">
                     </a>
                     <div class="title-sub-sub-menu">
-                        <p>Mon trung</p>
+                        <p>{{ $subfood->name }}</p>
                     </div>
                 </div>
-                <div class="item item-sub-menu">
-                    <a href="javascript:void(0)" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img src="http://beeimg.com/images/h26180623163.jpg" alt="">
-                    </a>
-                    <div class="title-sub-sub-menu">
-                        <p>Mon trung</p>
-                    </div>
-                </div>
-                <div class="item item-sub-menu">
-                    <a href="javascript:void(0)" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img src="http://beeimg.com/images/h26180623163.jpg" alt="">
-                    </a>
-                    <div class="title-sub-sub-menu">
-                        <p>Mon trung</p>
-                    </div>
-                </div>
-                <div class="item item-sub-menu">
-                    <a href="javascript:void(0)" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img src="http://beeimg.com/images/h26180623163.jpg" alt="">
-                    </a>
-                    <div class="title-sub-sub-menu">
-                        <p>Mon trung</p>
-                    </div>
-                </div>
-                <div class="item item-sub-menu">
-                    <a href="javascript:void(0)" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img src="http://beeimg.com/images/h26180623163.jpg" alt="">
-                    </a>
-                    <div class="title-sub-sub-menu">
-                        <p>Mon trung</p>
-                    </div>
-                </div>
+                @endforeach
+
             </div>
+
         </div>
-        <div class="row list-img-service">
-            <p class="title-sub-menu">Món sup </p>
-            <div class="owl-carousel owl-theme">
-                <div class="item item-sub-menu">
-                    <a href="javascript:void(0)" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img src="http://beeimg.com/images/h26180623163.jpg" alt="">
-                    </a>
-                    <div class="title-sub-sub-menu">
-                        <p>Mon trung</p>
-                    </div>
-                </div>
-                <div class="item item-sub-menu">
-                    <a href="javascript:void(0)" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img src="http://beeimg.com/images/h26180623163.jpg" alt="">
-                    </a>
-                    <div class="title-sub-sub-menu">
-                        <p>Mon trung</p>
-                    </div>
-                </div>
-                <div class="item item-sub-menu">
-                    <a href="javascript:void(0)" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img src="http://beeimg.com/images/h26180623163.jpg" alt="">
-                    </a>
-                    <div class="title-sub-sub-menu">
-                        <p>Mon trung</p>
-                    </div>
-                </div>
-                <div class="item item-sub-menu">
-                    <a href="javascript:void(0)" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img src="http://beeimg.com/images/h26180623163.jpg" alt="">
-                    </a>
-                    <div class="title-sub-sub-menu">
-                        <p>Mon trung</p>
-                    </div>
-                </div>
-                <div class="item item-sub-menu">
-                    <a href="javascript:void(0)" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img src="http://beeimg.com/images/h26180623163.jpg" alt="">
-                    </a>
-                    <div class="title-sub-sub-menu">
-                        <p>Mon trung</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row list-img-service">
-            <p class="title-sub-menu">Món sup </p>
-            <div class="owl-carousel owl-theme">
-                <div class="item item-sub-menu">
-                    <a href="javascript:void(0)" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img src="http://beeimg.com/images/h26180623163.jpg" alt="">
-                    </a>
-                    <div class="title-sub-sub-menu">
-                        <p>Mon trung</p>
-                    </div>
-                </div>
-                <div class="item item-sub-menu">
-                    <a href="javascript:void(0)" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img src="http://beeimg.com/images/h26180623163.jpg" alt="">
-                    </a>
-                    <div class="title-sub-sub-menu">
-                        <p>Mon trung</p>
-                    </div>
-                </div>
-                <div class="item item-sub-menu">
-                    <a href="javascript:void(0)" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img src="http://beeimg.com/images/h26180623163.jpg" alt="">
-                    </a>
-                    <div class="title-sub-sub-menu">
-                        <p>Mon trung</p>
-                    </div>
-                </div>
-                <div class="item item-sub-menu">
-                    <a href="javascript:void(0)" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img src="http://beeimg.com/images/h26180623163.jpg" alt="">
-                    </a>
-                    <div class="title-sub-sub-menu">
-                        <p>Mon trung</p>
-                    </div>
-                </div>
-                <div class="item item-sub-menu">
-                    <a href="javascript:void(0)" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img src="http://beeimg.com/images/h26180623163.jpg" alt="">
-                    </a>
-                    <div class="title-sub-sub-menu">
-                        <p>Mon trung</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row list-img-service">
-            <p class="title-sub-menu">Món sup </p>
-            <div class="owl-carousel owl-theme">
-                <div class="item item-sub-menu">
-                    <a href="javascript:void(0)" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img src="http://beeimg.com/images/h26180623163.jpg" alt="">
-                    </a>
-                    <div class="title-sub-sub-menu">
-                        <p>Mon trung</p>
-                    </div>
-                </div>
-                <div class="item item-sub-menu">
-                    <a href="javascript:void(0)" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img src="http://beeimg.com/images/h26180623163.jpg" alt="">
-                    </a>
-                    <div class="title-sub-sub-menu">
-                        <p>Mon trung</p>
-                    </div>
-                </div>
-                <div class="item item-sub-menu">
-                    <a href="javascript:void(0)" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img src="http://beeimg.com/images/h26180623163.jpg" alt="">
-                    </a>
-                    <div class="title-sub-sub-menu">
-                        <p>Mon trung</p>
-                    </div>
-                </div>
-                <div class="item item-sub-menu">
-                    <a href="javascript:void(0)" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img src="http://beeimg.com/images/h26180623163.jpg" alt="">
-                    </a>
-                    <div class="title-sub-sub-menu">
-                        <p>Mon trung</p>
-                    </div>
-                </div>
-                <div class="item item-sub-menu">
-                    <a href="javascript:void(0)" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img src="http://beeimg.com/images/h26180623163.jpg" alt="">
-                    </a>
-                    <div class="title-sub-sub-menu">
-                        <p>Mon trung</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @endforeach
     </div>
 
-
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
 @endsection
 
 @section('script')
@@ -262,7 +81,7 @@
             nav: true,
             items: 2,
             autoplay: true,
-            autoplayTimeout: 1000,
+            autoplayTimeout: 1500,
             responsive: {
                 0: {
                     items: 1

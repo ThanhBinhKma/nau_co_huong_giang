@@ -31,7 +31,7 @@
             </li>
 
             @php
-                $arg_staff = ['system_admin.products.index', 'system_admin.products.create', 'system_admin.products.store'];
+                $arg_staff = ['system_admin.services.index', 'system_admin.services.create', 'system_admin.services.store', 'system_admin.services.edit'];
             @endphp
             @if (in_array($name, $arg_staff))
                 <li class="active">
@@ -43,34 +43,30 @@
             </a>
             </li>
             @php
-                $arg_staff = ['system_admin.bills.index', 'system_admin.bills.create', 'system_admin.bills.store'];
+                $arg_staff = ['system_admin.menus.index', 'system_admin.menus.create', 'system_admin.menus.store', 'system_admin.menus.edit'];
             @endphp
             @if (in_array($name, $arg_staff))
                 <li class="active">
                 @else
                 <li>
             @endif
-            <a href="">
-                <i class="fa fa-database" aria-hidden="true"></i> <span>Hoá đơn</span>
+            <a href="{{ route('system_admin.menus.index') }}">
+                <i class="fa fa-database" aria-hidden="true"></i> <span>Thực đơn cỗ</span>
             </a>
             </li>
 
             @php
-                $arg_staff = ['system_admin.spendings.index'];
+                $arg_staff = ['system_admin.foods.index', 'system_admin.foods.create', 'system_admin.foods.store', 'system_admin.foods.edit'];
             @endphp
             @if (in_array($name, $arg_staff))
                 <li class="active">
                 @else
                 <li>
             @endif
-            <a href="">
-                <i class="fa fa-database" aria-hidden="true"></i> <span>Chi tiêu</span>
+            <a href="{{ route('system_admin.foods.index') }}">
+                <i class="fa fa-database" aria-hidden="true"></i> <span>Các món</span>
             </a>
             </li>
-
-
-
-
         </ul>
     </section>
     <!-- /.sidebar -->

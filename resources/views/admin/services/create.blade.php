@@ -34,14 +34,7 @@
                                     @endif
                                 </div>
 
-                                <div class="form-group">
-                                    <label for="title" class="control-label required">Nội dung</label>
-                                    <textarea class="form-control" id="content" cols="30" rows="10"
-                                        name="description"></textarea>
-                                    @if ($errors->first('title'))
-                                        <div class="error">{{ $errors->first('title') }}</div>
-                                    @endif
-                                </div>
+
                             </div>
                         </div><!-- end.tab-content -->
                     </div>

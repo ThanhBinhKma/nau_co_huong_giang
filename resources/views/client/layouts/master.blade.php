@@ -50,13 +50,45 @@
                 $('.header-mobile-humbuger').toggleClass('open');
                 $('.header-mobile-humbuger-menu').toggleClass('active');
                 $('.header-mobile-humbuger-sub-menu-menu').removeClass('active');
+                $('.header-mobile-humbuger-sub-menu-service').removeClass('active');
             })
             $('.menu-menu-on-click').on('click', function() {
                 $('.header-mobile-humbuger-sub-menu-menu').toggleClass('active');
             })
+
+            $('.menu-service-on-click').on('click', function() {
+                $('.header-mobile-humbuger-sub-menu-service').toggleClass('active');
+            })
         })
     </script>
     @yield('script')
+    <!-- Messenger Plugin chat Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Plugin chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "111761914287754");
+      chatbox.setAttribute("attribution", "biz_inbox");
+
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v12.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
 </body>
 
 </html>

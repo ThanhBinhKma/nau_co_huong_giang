@@ -33,17 +33,16 @@
                     <div>
                         <img src="{{ asset('img/icon_table.png') }}" alt="">
                     </div>
-                    <p></p>
                 </div>
-                <div class="col-xl-4 col-4 col-lg-4 col-sm-4">
+                <div class="col-xl-4 col-4 col-lg-4 col-sm-4 text-center">
                     <div>
                         <img src="{{ asset('img/icon_catering.png') }}" alt="">
                     </div>
-                    <p></p>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-4 col-sm-4">
-                    <img src="{{ asset('img/icon_waitress.png') }}" alt="">
-                    <p></p>
+                <div class="col-xl-4 col-lg-4 col-4 col-sm-4 text-right">
+                    <div>
+                        <img src="{{ asset('img/icon_waitress.png') }}" alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -60,70 +59,47 @@
                 <h2>DỊCH VỤ</h2>
             </div>
         </div>
-        <div class="row list-img-service">
-            <div class="col-6 col-md-6 col-xl-6 col-lg-6 div-outnner">
-                <div>
-                    <div class="border-img-service">
-                        <img src="{{ asset('img/dat-tiec-tai-nha-mon-ngon-1.png') }}" alt="">
+        <div class="row list-img-service display-pc">
+            @foreach ($home_services as $key => $service)
+                @if ($key > 5)
+                    @break
+                @else
+                    @if ($key < 2)
+                        <div class="col-12 col-md-6 col-xl-6 col-lg-6 div-outnner mb-30">
+                            <div>
+                                <div class="border-img-service">
+                                    <img src="{{ asset($service->image) }}" alt="" class="img-top-service-home">
+                                </div>
+                                <div class="bg-div-inner"></div>
+                                <div class="div-inner">
+                                    {{ $service->name }}
+                                    <span><i class="fas fa-arrow-right"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    @elseif ($key < 5) <div class="col-12 col-md-4 col-xl-4 col-lg-4 div-outnner mb-30">
+                        <div class="border-img-service">
+                            <img src="{{ asset($service->image) }}" alt="" class="img-center-service-home">
+                        </div>
+                        <div class="bg-div-inner"></div>
+                        <div class="div-inner">{{ $service->name }}
+                            <span><i class="fas fa-arrow-right"></i></span>
+                        </div>
                     </div>
-                    <div class="bg-div-inner"></div>
-                    <div class="div-inner">Tiệc tại gia
-                        <span><i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-6 col-xl-6 col-lg-6 div-outnner">
-                <div class="border-img-service">
-                    <img src="{{ asset('img/dat-tiec-tai-co-quan.jpg') }}" alt="">
-                </div>
-                <div class="bg-div-inner"></div>
-                <div class="div-inner">Tiệc cơ quan
-                    <span><i class="fas fa-arrow-right"></i></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="row list-img-service">
-            <div class="col-6 col-md-4 col-xl-4 col-lg-4 div-outnner">
-                <div class="border-img-service">
-                    <img src="{{ asset('img/tiec-sinh-nhat.jpg') }}" alt="">
-                </div>
-                <div class="bg-div-inner"></div>
-                <div class="div-inner">Tiệc sinh nhật
-                    <span><i class="fas fa-arrow-right"></i></span>
-                </div>
-            </div>
-            <div class="col-6 col-md-4 col-xl-4 col-lg-4 div-outnner">
-                <div class="border-img-service">
-                    <img src="{{ asset('img/tiec-cuoi-2.jpg') }}" alt="">
-                </div>
-                <div class="bg-div-inner"></div>
-                <div class="div-inner">Tiệc đám cưới
-                    <span><i class="fas fa-arrow-right"></i></span>
-                </div>
-            </div>
-            <div class="col-6 col-md-4 col-xl-4 col-lg-4 div-outnner display-pc">
-                <div class="border-img-service">
-                    <img src="{{ asset('img/tiec-tan-gia.png') }}" alt="">
-                </div>
-                <div class="bg-div-inner"></div>
-                <div class="div-inner">Tiệc tân gia
-                    <span><i class="fas fa-arrow-right"></i></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="row list-img-service">
-            <div class="col-6 col-md-6 col-lg-6 col-xl-6 div-outnner">
-                <div class="border-img-service">
-                    <img src="{{ asset('img/tiec-buffet.jpg') }}" alt="">
-                </div>
-                <div class="bg-div-inner"></div>
-                <div class="div-inner">Tiệc buffet
-                    <span><i class="fas fa-arrow-right"></i></span>
-                </div>
-            </div>
-            <div class="col-6 col-md-6 col-xl-6 col-lg-6 div-outnner">
+                    @else
+                        <div class="col-12 col-md-6 col-lg-6 col-xl-6 div-outnner">
+                            <div class="border-img-service">
+                                <img src="{{ asset($service->image) }}" alt="" class="img-top-service-home">
+                            </div>
+                            <div class="bg-div-inner"></div>
+                            <div class="div-inner">{{ $service->name }}
+                                <span><i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    @endif
+                @endif
+            @endforeach
+            <div class="col-12 col-md-6 col-xl-6 col-lg-6 div-outnner">
                 <div class="border-img-service">
                     <img src="{{ asset('img/giao-mon-ngon-tan-nha.jpg') }}" alt="">
                 </div>
@@ -133,6 +109,57 @@
                 </div>
             </div>
         </div>
+
+    <div class="row list-img-service display-mobile">
+        @foreach ($home_services as $keys => $service)
+            @if ($keys > 5)
+            @break
+        @else
+            @if ($keys < 2)
+                <div class="col-12 col-sm-6 col-md-6 col-xl-6 col-lg-6 div-outnner mb-30">
+                    <div>
+                        <div class="border-img-service">
+                            <img src="{{ asset($service->image) }}" alt="" class="img-top-service-home">
+                        </div>
+                        <div class="bg-div-inner"></div>
+                        <div class="div-inner">
+                            {{ $service->name }}
+                            <span><i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            @elseif ($keys < 5) <div class="col-12 col-sm-6 col-md-4 col-xl-4 col-lg-4 div-outnner mb-30">
+                    <div class="border-img-service">
+                        <img src="{{ asset($service->image) }}" alt="" class="img-center-service-home">
+                    </div>
+                    <div class="bg-div-inner"></div>
+                    <div class="div-inner">{{ $service->name }}
+                        <span><i class="fas fa-arrow-right"></i></span>
+                    </div>
+    </div>
+@else
+    <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 div-outnner">
+        <div class="border-img-service">
+            <img src="{{ asset($service->image) }}" alt="" class="img-top-service-home">
+        </div>
+        <div class="bg-div-inner"></div>
+        <div class="div-inner">{{ $service->name }}
+            <span><i class="fas fa-arrow-right"></i></span>
+        </div>
+    </div>
+    @endif
+    @endif
+    @endforeach
+    <div class="col-12 col-sm-12 col-md-6 col-xl-6 col-lg-6 div-outnner div-ship">
+        <div class="border-img-service">
+            <img src="{{ asset('img/giao-mon-ngon-tan-nha.jpg') }}" alt="">
+        </div>
+        <div class="bg-div-inner"></div>
+        <div class="div-inner">Giao tận nhà
+            <span><i class="fas fa-arrow-right"></i></span>
+        </div>
+    </div>
+</div>
     </div>
     <div class="container">
         <div class="row">
@@ -146,55 +173,33 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-md-6 col-lg-6 col-xl-6 dish-list">
+            @foreach($foods as $key => $food)
+            @if ($key%2!=0)
+            <div class="col-12 col-md-6 col-lg-6 col-xl-6 dish-list rv-row">
                 <div class="img-show-dish">
-                    <img src="https://brandowp.b-cdn.net/restaurant/wp-content/uploads/sites/6/2016/03/blog-post-img6.jpg.webp"
+                    <img src="{{ asset('images/' . $food->image) }}"
                         alt="">
                 </div>
                 <div class="content-show-dish">
-                    <span>18 MARCH 2016</span>
                     <p>
-                        TOMATO AND EGGLESS PIZZA BREAKFAST FOOD
+                        {{ $food->name }}
                     </p>
                 </div>
             </div>
+            @else
             <div class="col-12 col-md-6 col-lg-6 col-xl-6 dish-list">
                 <div class="img-show-dish">
-                    <img src="https://brandowp.b-cdn.net/restaurant/wp-content/uploads/sites/6/2016/03/blog-post-img6.jpg.webp"
+                    <img src="{{ asset('images/' . $food->image) }}"
                         alt="">
                 </div>
                 <div class="content-show-dish">
-                    <span>18 MARCH 2016</span>
                     <p>
-                        TOMATO AND EGGLESS PIZZA BREAKFAST FOOD
+                        {{ $food->name }}
                     </p>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-6 col-xl-6 dish-list">
-                <div class="img-show-dish">
-                    <img src="https://brandowp.b-cdn.net/restaurant/wp-content/uploads/sites/6/2016/03/blog-post-img6.jpg.webp"
-                        alt="">
-                </div>
-                <div class="content-show-dish">
-                    <span>18 MARCH 2016</span>
-                    <p>
-                        TOMATO AND EGGLESS PIZZA BREAKFAST FOOD
-                    </p>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-6 col-xl-6 dish-list">
-                <div class="img-show-dish">
-                    <img src="https://brandowp.b-cdn.net/restaurant/wp-content/uploads/sites/6/2016/03/blog-post-img6.jpg.webp"
-                        alt="">
-                </div>
-                <div class="content-show-dish">
-                    <span>18 MARCH 2016</span>
-                    <p>
-                        TOMATO AND EGGLESS PIZZA BREAKFAST FOOD
-                    </p>
-                </div>
-            </div>
-
+            @endif
+            @endforeach
         </div>
 
         <div class="container">
@@ -273,8 +278,7 @@
                             </div>
                         </div>
                         <h2 class="font-cond-b fg-text-d lts-md fs-300 fs-300-xs no-mg" style="margin-top:15px"
-                            contenteditable="false">ĐÁNH GIÁ CỦA
-                            KHÁCH HÀNG</h2>
+                            contenteditable="false">ĐÁNH GIÁ CỦA KHÁCH HÀNG</h2>
                     </div>
                     <div class="owl-carousel owl-theme text-center">
                         <div class="item sub-item-feedback text-center">

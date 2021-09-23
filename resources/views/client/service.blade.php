@@ -1,7 +1,7 @@
 @extends('client.layouts.master')
 @section('css')
     <style>
-        .header-li-about-active {
+        .header-li-service-active {
             border-bottom: 3px solid #f5a60d;
         }
 

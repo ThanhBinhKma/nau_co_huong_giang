@@ -34,39 +34,12 @@
             </div>
         </div>
         <div class="row list-img-service">
-            <p>What is lorem ipsum?
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-                Aldus PageMaker including versions of Lorem Ipsum.
-
-                Why do we use it?
-                It is a long established fact that a reader will be distracted by the readable content of a page when
-                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
-                letters, as opposed to using 'Content here, content here', making it look like readable English. Many
-                desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
-                search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved
-                over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-
-                What is lorem ipsum?
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-                Aldus PageMaker including versions of Lorem Ipsum.
-
-                Why do we use it?
-                It is a long established fact that a reader will be distracted by the readable content of a page when
-                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
-                letters, as opposed to using 'Content here, content here', making it look like readable English. Many
-                desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
-                search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved
-                over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-
-
+            <p class="mt-2">Dịch vụ nấu cỗ Hương Giang là dịch vụ đặt cỗ trọn gói tại nhà có gần 15 năm kinh nghiệm trong lĩnh
+                vực đặt cỗ, đi lên và phát triển dựa trên tiêu chí: “Uy tín – Chuyên nghiệp – Chất lượng”. Cho đến
+                nay đã có nhiều bước tiến quan trọng và cải thiện thêm những phong cách mới lạ, độc đáo và sang
+                trọng cho mỗi buổi tiệc, sự kiện.
+                Tại dịch vụ nấu cỗ Hương Giang chúng tôi cam kết sẽ nỗ lực mang đến sự thành công và ấn tượng nhất
+                cho ngày trọng đại của Quý vị.
             </p>
         </div>
     </div>

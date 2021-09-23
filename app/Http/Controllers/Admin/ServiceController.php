@@ -26,7 +26,6 @@ class ServiceController extends Controller
         Service::create([
             'name' => $request->title,
             'image' => $request->thumbnail,
-            'description' => $request->description,
             'status' => $request->status
         ]);
         return redirect()->route('system_admin.services.index');

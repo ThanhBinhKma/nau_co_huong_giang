@@ -3,13 +3,17 @@
 namespace App\Http\Controllers\Client;
 
 use App\Http\Controllers\Controller;
+use App\Models\Menu;
+use App\Models\Food;
+use App\Models\SubFood;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        return view('client.index');
+        $foods = SubFood::inRandomOrder()->limit(4)->get();
+        return view('client.index')->with(['foods' => $foods]);
     }
 
     public function about()
@@ -17,13 +21,16 @@ class HomeController extends Controller
         return view('client.about');
     }
 
-    public function menu()
+    public function menu($slug)
     {
-        return view('client.menu');
+        $menu = Menu::where('slug', $slug)->first();
+        $foods = Food::where('menu_id', 2)->get();
+        return view('client.menu')->with(['menu' => $menu, 'foods' => $foods]);
     }
 
     public function service()
     {
+
         return view('client.service');
     }
 

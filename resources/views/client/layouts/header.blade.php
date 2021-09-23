@@ -47,33 +47,29 @@
                     <li class="nav-item header-li-about-active">
                         <a class="nav-link" href="{{ route('client.about') }}">Giới thiệu</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown header-li-menu-active">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Thực đơn cỗ
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('client.menu') }}">Thực đơn món khai vị</a>
-                            <a class="dropdown-item" href="#">Thực đơn món chính</a>
-                            <a class="dropdown-item" href="#">Thực đơn cơm</a>
-                            <a class="dropdown-item" href="#">Thực đơn canh</a>
-                            <a class="dropdown-item" href="#">Thực đơn thực đơn đồ uống</a>
-                            <a class="dropdown-item" href="#">Thực đơn món tráng miệng</a>
-                            <a class="dropdown-item" href="#">Thực đơn cỗ chay</a>
+                            @foreach ($home_menus as $home_menu)
+                                <a class="dropdown-item"
+                                    href="{{ route('client.menu' , ['slug' => $home_menu->slug]) }}">
+                                <span>{{ $home_menu->name }}</span></a>
+                            @endforeach
                         </div>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown header-li-service-active">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Dịch vụ
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('client.service') }}">Tiệc tại gia</a>
-                            <a class="dropdown-item" href="#">Tiệc cơ quan</a>
-                            <a class="dropdown-item" href="#">Tiệc sinh nhật</a>
-                            <a class="dropdown-item" href="#">Tiệc đám cưới</a>
-                            <a class="dropdown-item" href="#">Tiệc tân gia</a>
-                            <a class="dropdown-item" href="#">Tiệc buffet</a>
+                            @foreach ($home_services as $header_service)
+                                <a class="dropdown-item"
+                                    href="{{ route('client.service', ['id' => $header_service->id ]) }}">{{ $header_service->name }}</a>
+                            @endforeach
                         </div>
                     </li>
                     <li class="nav-item">
@@ -118,7 +114,7 @@
             </a>
         </li>
         <li>
-            <a href="javascript:void(0)" class="ann">
+            <a href="javascript:void(0)" class="ann menu-service-on-click">
                 Dịch vụ
             </a>
         </li>
@@ -131,22 +127,16 @@
 
 <div class="header-mobile-humbuger-sub-menu-menu">
     <ul>
-        <li> <a class="dropdown-item" href="{{ route('client.menu') }}">Thực đơn món khai vị</a></li>
-        <li> <a class="dropdown-item" href="#">Thực đơn món chính</a></li>
-        <li>
-            <a class="dropdown-item" href="#">Thực đơn cơm</a>
-        </li>
-        <li>
-            <a class="dropdown-item" href="#">Thực đơn canh</a>
-        </li>
-        <li>
-            <a class="dropdown-item" href="#">Thực đơn thực đơn đồ uống</a>
-        </li>
-        <li>
-            <a class="dropdown-item" href="#">Thực đơn món tráng miệng</a>
-        </li>
-        <li>
-            <a class="dropdown-item" href="#">Thực đơn cỗ chay</a>
-        </li>
+        @foreach ($home_menus as $home_menu)
+            <li> <a class="dropdown-item" href="{{ route('client.menu' , ['slug' => $home_menu->slug]) }}">{{ $home_menu->name }}</a></li>
+        @endforeach
+    </ul>
+</div>
+
+<div class="header-mobile-humbuger-sub-menu-service">
+    <ul>
+        @foreach ($home_services as $home_service)
+            <li> <a class="dropdown-item" href="{{ route('client.service' , ['id' => $home_service->id]) }}">{{ $home_service->name }}</a></li>
+        @endforeach
     </ul>
 </div>

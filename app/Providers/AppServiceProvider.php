@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Menu;
 use App\Models\Service;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
@@ -29,6 +30,7 @@ class AppServiceProvider extends ServiceProvider
         Schema::defaultStringLength(191);
 
         $home_services = Service::all();
-        View::share('home_services', $home_services);
+        $home_menus = Menu::all();
+        View::share(['home_services'=> $home_services,'home_menus' => $home_menus]);
     }
 }

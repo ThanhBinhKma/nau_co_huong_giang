@@ -34,6 +34,7 @@ class FoodController extends Controller
         $food->menu_id = $request->menu_id;
         $food->save();
         $name_sub_food = $request->name_sub_food;
+        $description_sub_food = $request->description;
         if (isset($request->name_sub_food) && count($name_sub_food) > 0) {
             for ($i = 0; $i < count($name_sub_food); $i++) {
                 $image = $request->img_sub_food[$i];
@@ -42,6 +43,7 @@ class FoodController extends Controller
                 $sub_food = new SubFood();
                 $sub_food->name = $name_sub_food[$i];
                 $sub_food->image = $name_file;
+                $sub_food->description = $description_sub_food[$i];
                 $sub_food->food_id = $food->id;
                 $sub_food->save();
             }
@@ -67,6 +69,7 @@ class FoodController extends Controller
         $food->menu_id = $request->menu_id;
         $food->save();
         $name_sub_food = $request->name_sub_food;
+        $description_sub_food = $request->description;
         if (isset($request->name_sub_food) && count($name_sub_food) > 0) {
             SubFood::where('food_id', $id)->delete();
             for ($i = 0; $i < count($name_sub_food); $i++) {
@@ -76,6 +79,7 @@ class FoodController extends Controller
                 $sub_food = new SubFood();
                 $sub_food->name = $name_sub_food[$i];
                 $sub_food->image = $name_file;
+                $sub_food->description = $description_sub_food[$i];
                 $sub_food->food_id = $food->id;
                 $sub_food->save();
             }

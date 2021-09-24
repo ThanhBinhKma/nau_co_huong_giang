@@ -2,17 +2,14 @@
     <div class="container-fluid">
         <div class="row header-top">
             <div class="col-12 d-flex justify-content-center">
-                <div class="fl-gr-1">
-
-                </div>
-                <div class="fl-gr-1 text-center">
+                <div class="text-center" style="width:50%">
                     <ul>
                         <li>
                             <strong>Dịch vụ đặt cỗ trọn gói tại nhà</strong>
                         </li>
                     </ul>
                 </div>
-                <div>
+                <div class="">
                     <ul class="">
                         <li class="header-nav-list-contact">
                             <i class="fa fa-phone"></i>
@@ -26,7 +23,6 @@
                         </li>
                     </ul>
                 </div>
-                <div class="fl-gr-1"></div>
             </div>
         </div>
     </div>
@@ -73,7 +69,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link">Liên hệ</a>
+                        <a href="{{ route('client.contact') }}" class="nav-link">Liên hệ</a>
                     </li>
                 </ul>
             </div>
@@ -119,7 +115,7 @@
             </a>
         </li>
         <li>
-            <a href="">Liên hệ
+            <a href="{{ route('client.contact') }}">Liên hệ
             </a>
         </li>
     </ul>

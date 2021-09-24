@@ -184,6 +184,10 @@
                     <p>
                         {{ $food->name }}
                     </p>
+                    <span>
+                        {{ Illuminate\Support\Str::limit($food->description,100, $end='...') }}
+                    </span>
+                    <button class="btn">Đặt món</button>
                 </div>
             </div>
             @else
@@ -196,6 +200,10 @@
                     <p>
                         {{ $food->name }}
                     </p>
+                    <span>
+                        {{ Illuminate\Support\Str::limit($food->description,100, $end='...') }}
+                    </span>
+                    <button class="btn">Đặt món</button>
                 </div>
             </div>
             @endif

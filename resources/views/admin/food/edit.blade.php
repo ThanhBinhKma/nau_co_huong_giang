@@ -101,6 +101,10 @@
                                         <img src="{{ asset('images/' . $subfood->image) }}" alt="" height="150px"
                                             width="150px" style="object-fit: cover">
                                     </div>
+                                    <div class="form-group">
+                                        <label for="" class="control-label required">Mô tả</label>
+                                        <textarea class="form-control" name="description[]" rows="4">{{ $subfood->description }}</textarea>
+                                    </div>
                                 </div>
                             @endforeach
                         </div><!-- end.tab-content -->
@@ -142,7 +146,7 @@
                 $('.tab-content').append('<div class="tab-pane active show border-tab-pane div-' + key +
                     '" id="tab_detail"><a href="javascript:void(0)" class="btn-delete-food" key-button="' +
                     key +
-                    '"><i class="fa fa-times"></i></a><div class="form-group"><label for="" class="control-label required">Tên Món</label> <input type="text" class="form-control" data-counter="120" name="name_sub_food[]"></div><div class="form-group"><label for="" class="control-label required">Ảnh Món</label><input type="file" class="form-control" data-counter="120" name="img_sub_food[]"></div></div>'
+                    '"><i class="fa fa-times"></i></a><div class="form-group"><label for="" class="control-label required">Tên Món</label> <input type="text" class="form-control" data-counter="120" name="name_sub_food[]"></div><div class="form-group"><label for="" class="control-label required">Ảnh Món</label><input type="file" class="form-control" data-counter="120" name="img_sub_food[]"></div><div class="form-group"><label for="" class="control-label required">Mô tả</label> <textarea class="form-control" name="description[]" rows="4"> </textarea></div></div>'
                 );
             })
 

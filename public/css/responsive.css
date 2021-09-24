@@ -39,10 +39,6 @@
         position: absolute !important;
     }
 
-    .fl-gr-1 {
-        flex: none;
-    }
-
     .header-top {
         font-size: 14px;
     }

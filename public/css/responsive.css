@@ -182,6 +182,12 @@
     .div-inner {
         font-size: 14px;
     }
+    .phonering-alo-ph-img-circle {
+        left:20px;
+    }
+    .phonering-alo-ph-circle-fill,.phonering-alo-ph-circle {
+        left:0;
+    }
 }
 
 @media (max-width: 480px) {

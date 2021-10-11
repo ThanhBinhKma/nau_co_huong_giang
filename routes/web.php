@@ -15,7 +15,7 @@ Route::post('images-save', 'Admin\HomeController@saveImage')->name('images-save'
 
 Route::get('/', 'Client\HomeController@index')->name('client.home');
 Route::get('/gioi-thieu', 'Client\HomeController@about')->name('client.about');
-Route::get('thuc-don-co/{slug}', 'Client\HomeController@menu')->name('client.menu');
+Route::get('thuc-don-co', 'Client\HomeController@menu')->name('client.menu');
 Route::get('mon-ngon', 'Client\HomeController@deliciousFoods')->name('client.deliciou_foods');
 Route::get('lien-he', 'Client\HomeController@contact')->name('client.contact');
 Route::get('dich-vu/{id}', 'Client\HomeController@service')->name('client.service');
@@ -37,13 +37,21 @@ Route::middleware(['auth'])->namespace('Admin')->prefix('admin')->name('system_a
     Route::post('services/{id}', 'ServiceController@update')->name('services.update');
 
 
-    Route::get('/menus', 'MenuController@index')->name('menus.index');
-    Route::get('menus/create', 'MenuController@create')->name('menus.create');
-    Route::post('menus/store', 'MenuController@store')->name('menus.store');
-    Route::delete('menus/destroy', 'MenuController@destroy')->name('menus.destroy');
-    Route::delete('menus/destroyAll', 'MenuController@destroyAll')->name('menus.destroyAll');
-    Route::get('menus/{id}', 'MenuController@edit')->name('menus.edit');
-    Route::post('menus/{id}', 'MenuController@update')->name('menus.update');
+    Route::get('/menu', 'MenuController@index')->name('menu.index');
+    Route::get('menu/create', 'MenuController@create')->name('menu.create');
+    Route::post('menu/store', 'MenuController@store')->name('menu.store');
+    Route::delete('menu/destroy', 'MenuController@destroy')->name('menu.destroy');
+    Route::delete('menu/destroyAll', 'MenuController@destroyAll')->name('menu.destroyAll');
+    Route::get('menu/{id}', 'MenuController@edit')->name('menu.edit');
+    Route::post('menu/{id}', 'MenuController@update')->name('menu.update');
+
+    Route::get('/food-type', 'FoodTypeController@index')->name('food_type.index');
+    Route::get('food-type/create', 'FoodTypeController@create')->name('food_type.create');
+    Route::post('food-type/store', 'FoodTypeController@store')->name('food_type.store');
+    Route::delete('food-type/destroy', 'FoodTypeController@destroy')->name('food_type.destroy');
+    Route::delete('food-type/destroyAll', 'FoodTypeController@destroyAll')->name('food_type.destroyAll');
+    Route::get('food-type/{id}', 'FoodTypeController@edit')->name('food_type.edit');
+    Route::post('food-type/{id}', 'FoodTypeController@update')->name('food_type.update');
 
     Route::get('/foods', 'FoodController@index')->name('foods.index');
     Route::get('foods/create', 'FoodController@create')->name('foods.create');
@@ -54,4 +62,7 @@ Route::middleware(['auth'])->namespace('Admin')->prefix('admin')->name('system_a
     Route::post('foods/{id}', 'FoodController@update')->name('foods.update');
 
     Route::delete('subfoods/{id}', 'FoodController@deleteSubFood')->name('subfood.delete');
+
+    Route::post('ckeditor/upload', 'ServiceController@upload')->name('ckeditor.upload');
+
 });

@@ -32,7 +32,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto d-flex w-100 justify-content-end align-item-center">
                     <li>
-                        <a href="/">
+                        <a href="{{ route('client.home') }}">
                             <img src="{{ asset('img/logo.png') }}" alt="">
                         </a>
                     </li>
@@ -43,19 +43,7 @@
                     <li class="nav-item header-li-about-active">
                         <a class="nav-link" href="{{ route('client.about') }}">Giới thiệu</a>
                     </li>
-                    <li class="nav-item dropdown header-li-menu-active">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Thực đơn cỗ
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            @foreach ($home_menus as $home_menu)
-                                <a class="dropdown-item"
-                                    href="{{ route('client.menu' , ['slug' => $home_menu->slug]) }}">
-                                <span>{{ $home_menu->name }}</span></a>
-                            @endforeach
-                        </div>
-                    </li>
+
                     <li class="nav-item dropdown header-li-service-active">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -67,6 +55,9 @@
                                     href="{{ route('client.service', ['id' => $header_service->id ]) }}">{{ $header_service->name }}</a>
                             @endforeach
                         </div>
+                    </li>
+                    <li class="nav-item dropdown header-li-menu-active">
+                        <a class="nav-link" href="{{ route('client.menu') }}">Thực đơn</a>
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('client.contact') }}" class="nav-link">Liên hệ</a>
@@ -98,20 +89,19 @@
 <div class="header-mobile-humbuger-menu">
     <ul>
         <li>
-            <a href="">Trang chủ</a>
+            <a href="{{ route('client.home') }}">Trang chủ</a>
         </li>
         <li>
-            <a href="">Giới thiệu</a>
+            <a href="{{ route('client.about') }}">Giới thiệu</a>
         </li>
-        <li>
-            <a href="javascript:void(0)" class="ann menu-menu-on-click">
-                Thực đơn cỗ
-                <span></span>
-            </a>
-        </li>
+
         <li>
             <a href="javascript:void(0)" class="ann menu-service-on-click">
                 Dịch vụ
+            </a>
+        </li><li>
+            <a href="{{ route('client.menu') }}">
+                Thực đơn cỗ
             </a>
         </li>
         <li>

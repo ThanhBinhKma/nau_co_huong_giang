@@ -75,25 +75,11 @@
                                     </select>
                                 </div>
 
-                                <div class="d-flex-add-food">
-                                    <a href="javascript:void(0)" class="btn btn-primary btn-add-food">Thêm món mới</a>
-                                </div>
+
+
+
                             </div>
-                            <div class="tab-pane active show border-tab-pane div-0" id="tab_detail">
-                                <a href="javascript:void(0)" class="btn-delete-food" key-button="0"><i class="fa fa-times"></i></a>
-                                <div class="form-group">
-                                    <label for="" class="control-label required">Tên Món</label>
-                                    <input type="text" class="form-control" name="name_sub_food[]" data-counter="120">
-                                </div>
-                                <div class="form-group">
-                                    <label for="" class="control-label required">Ảnh Món</label>
-                                    <input type="file" class="form-control" data-counter="120" name="img_sub_food[]">
-                                </div>
-                                <div class="form-group">
-                                    <label for="" class="control-label required">Mô tả</label>
-                                    <textarea class="form-control" name="description[]" rows="4"> </textarea>
-                                </div>
-                            </div>
+
 
                         </div><!-- end.tab-content -->
                     </div>
@@ -111,6 +97,32 @@
                                 <button type="submit" name="submit" value="apply" class="btn btn-success">
                                     <i class="fa fa-check-circle"></i> Lưu và Sửa
                                 </button>
+                            </div>
+                        </div>
+
+                        <div class="widget meta-boxes">
+                            <div class="widget-title">
+                                <h4><label for="image" class="control-label">Hình ảnh</label></h4>
+                            </div>
+                            <div class="widget-body">
+                                <div class="image-box">
+                                    <input id="thumbnail" type="hidden" name="thumbnail" value="" class="image-data">
+                                    <div class="preview-image-wrapper ">
+                                        <img id="holder" class="preview_image" src="{{ asset('images/placeholder.png') }}"
+                                            type="text" name="filepath" alt="preview image">
+                                        <a class="btn_remove_image" title="Xoá ảnh">
+                                            <i class="fa fa-times"></i>
+                                        </a>
+                                    </div>
+                                    <div class="image-box-actions">
+                                        <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
+                                            <i class="fa fa-picture-o"></i> Chọn hình ảnh
+                                        </a>
+                                    </div>
+                                    @if ($errors->first('thumbnail'))
+                                        <div class="error">{{ $errors->first('thumbnail') }}</div>
+                                    @endif
+                                </div>
                             </div>
                         </div>
                     </div>

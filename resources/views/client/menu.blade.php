@@ -33,7 +33,7 @@
         </div>
     </div>
 
-    <div class="container mt-4">
+    <div class="container mt-4 mb-4">
         <div class="row">
             <div class="col-12">
                 <div class="d-flex justify-content-center">
@@ -41,31 +41,20 @@
                 </div>
             </div>
             <div class="col-12 text-center text-title-index">
-                <h2 style="text-transform: uppercase">{{($menu->name) }}</h2>
-                <p class="mt-3">{{$menu->description}}</p>
-            </div>
-        </div>
-
-        @foreach ($foods as  $food)
-        <div class="row list-img-service">
-
-            <p class="title-sub-menu">{{ $food->name }} </p>
-            <div class="owl-carousel owl-theme">
-                @foreach($food->subfoods as $subfood)
-                <div class="item item-sub-menu">
-                    <a href="javascript:void(0)" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img src="{{ asset('images/' . $subfood->image) }}" alt="">
-                    </a>
-                    <div class="title-sub-sub-menu">
-                        <p>{{ $subfood->name }}</p>
-                    </div>
+                <h2 style="text-transform: uppercase">Thực đơn</h2>
+                <div>
+                    <img src="{{ asset('images/menu/167033284_444944423437999_3398161135937188365_n.jpg') }}" alt="">
                 </div>
-                @endforeach
-
+                <div>
+                    <img src="{{ asset('images/menu/22.jpg') }}" alt="">
+                </div>
+                <div>
+                    <img src="{{ asset('images/menu/th1.jpg') }}" alt="">
+                </div>
             </div>
-
         </div>
-        @endforeach
+
+
     </div>
 
 @endsection

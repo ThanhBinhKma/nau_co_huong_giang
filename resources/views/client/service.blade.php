@@ -30,104 +30,11 @@
                 </div>
             </div>
             <div class="col-12 text-center text-title-index">
-                <h2>TIEC TAN GIA</h2>
+                <h2>{{ $service->name }}</h2>
             </div>
         </div>
-        <div class="row list-img-service ">
-            <div class="w-100 mb-4">
-                <span class="title-sub-menu">Mam goi y co chuyen vit</span>
-            </div>
-            <div class="col-6">
-                <div class="text-center menu-in-service">
-                    <span>Menu</span>
-                </div>
-                <div class="row">
-                    <div class="col-5">
-                        <ol>
-                            <li>Vit quay bac kinh</li>
-                            <li>Vit quay bac kinh</li>
-                            <li>Vit quay bac kinh</li>
-                            <li>Vit quay bac kinh</li>
-                            <li>Vit quay bac kinh</li>
-                            <li>Vit quay bac kinh</li>
-                            <li>Vit quay bac kinh</li>
-                            <li>Vit quay bac kinh</li>
-                        </ol>
-                    </div>
-                    <div class="col-2 offset-col-1">
-                        <div><span>....................</span></div>
-                        <div><span>....................</span></div>
-                        <div><span>....................</span></div>
-                        <div><span>....................</span></div>
-                        <div><span>....................</span></div>
-                        <div><span>....................</span></div>
-                        <div><span>....................</span></div>
-                        <div><span>....................</span></div>
-                    </div>
-                    <div class="col-4">
-                        <div><span>220,000 d</span></div>
-                        <div><span>220,000 d</span></div>
-                        <div><span>220,000 d</span></div>
-                        <div><span>220,000 d</span></div>
-                        <div><span>220,000 d</span></div>
-                        <div><span>220,000 d</span></div>
-                        <div><span>220,000 d</span></div>
-                        <div><span>220,000 d</span></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <img src="https://nauco29.com/files/thumb/490/395//uploads/content/cochuyenmon-16.jpg" alt="">
-            </div>
-        </div>
-        <div class="line-with w-100 mb-3"></div>
-        <div class="row list-img-service">
-            <div class="w-100 mb-4">
-                <span class="title-sub-menu">Mam goi y co chuyen vit</span>
-            </div>
-            <br>
-            <div class="col-6">
-                <div class="text-center menu-in-service">
-                    <span>Menu</span>
-                </div>
-                <div class="row">
-                    <div class="col-5">
-                        <ol>
-                            <li>Vit quay bac kinh</li>
-                            <li>Vit quay bac kinh</li>
-                            <li>Vit quay bac kinh</li>
-                            <li>Vit quay bac kinh</li>
-                            <li>Vit quay bac kinh</li>
-                            <li>Vit quay bac kinh</li>
-                            <li>Vit quay bac kinh</li>
-                            <li>Vit quay bac kinh</li>
-                        </ol>
-                    </div>
-                    <div class="col-2 offset-col-1">
-                        <div><span>....................</span></div>
-                        <div><span>....................</span></div>
-                        <div><span>....................</span></div>
-                        <div><span>....................</span></div>
-                        <div><span>....................</span></div>
-                        <div><span>....................</span></div>
-                        <div><span>....................</span></div>
-                        <div><span>....................</span></div>
-                    </div>
-                    <div class="col-4">
-                        <div><span>220,000 d</span></div>
-                        <div><span>220,000 d</span></div>
-                        <div><span>220,000 d</span></div>
-                        <div><span>220,000 d</span></div>
-                        <div><span>220,000 d</span></div>
-                        <div><span>220,000 d</span></div>
-                        <div><span>220,000 d</span></div>
-                        <div><span>220,000 d</span></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <img src="https://nauco29.com/files/thumb/490/395//uploads/content/cochuyenmon-16.jpg" alt="">
-            </div>
+        <div class="row list-img-service img-serv ">
+            {!! $service->content !!}
         </div>
     </div>
 @endsection

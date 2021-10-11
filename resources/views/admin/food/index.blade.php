@@ -84,7 +84,7 @@
                                         ID<a class="fa fa-fw fa-sort" href="#"></a>
                                     </th>
                                     <th style="width: 150px;">Tên món</th>
-                                    <th class="text-center">Thực đơn cỗ</th>
+                                    <th class="text-center">Kiểu món</th>
 
                                     <th>Ngày tạo</th>
                                     <th>Tác vụ</th>

@@ -34,7 +34,11 @@
                                     @endif
                                 </div>
 
-
+                                <div class="form-group">
+                                    <label for="title" class="control-label required">Mô tả</label>
+                                    <textarea id="content" name="content" cols="80" rows="10">
+                                    </textarea>
+                                </div>
                             </div>
                         </div><!-- end.tab-content -->
                     </div>

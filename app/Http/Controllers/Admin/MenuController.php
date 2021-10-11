@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Menu;
+use App\Models\SubFood;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -23,11 +24,9 @@ class MenuController extends Controller
     public function store(Request $request)
     {
         $menu = new Menu();
-        $menu->name = $request->title;
-        $menu->slug = Str::slug($request->title, '-');
-        $menu->description = $request->description;
+        $menu->description = $request->content;
         $menu->save();
-        return redirect()->route('system_admin.menus.index');
+        return redirect()->route('system_admin.menu.index');
     }
 
 
@@ -41,11 +40,9 @@ class MenuController extends Controller
     public function update($id, Request $request)
     {
         $menu = Menu::find($id);
-        $menu->name = $request->title;
-        $menu->slug = Str::slug($request->title, '-');
-        $menu->description = $request->description;
+        $menu->description = $request->content;
         $menu->save();
-        return redirect()->route('system_admin.menus.index');
+        return redirect()->route('system_admin.menu.index');
     }
 
     public function destroy(Request $request)

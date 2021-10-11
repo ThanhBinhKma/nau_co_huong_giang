@@ -65,7 +65,7 @@
                                 </ul>
                             </div>
                             <div class="btn-group pull-right" style="margin-right: 10px">
-                                <a href="{{ route('system_admin.menus.create') }}" class="btn btn-sm btn-success"
+                                <a href="{{ route('system_admin.menu.create') }}" class="btn btn-sm btn-success"
                                     title="New">
                                     <i class="fa fa-save"></i><span class="hidden-xs">&nbsp;&nbsp;Thêm mới</span>
                                 </a>
@@ -84,7 +84,6 @@
                                         ID<a class="fa fa-fw fa-sort" href="#"></a>
                                     </th>
                                     <th style="width: 150px;">Tiêu đề</th>
-                                    <th class="text-center">Mô tả</th>
 
                                     <th>Ngày tạo</th>
                                     <th>Tác vụ</th>
@@ -104,13 +103,10 @@
                                                     title="{{ $menu->name }}">{{ $menu->name }}</a>
 
                                             </td>
-                                           <td class="text-center">
-                                            {{ Str::limit($menu->description , 100, '...')}}
-                                           </td>
                                             <td> {{ \Carbon\Carbon::parse($menu->created_at)->format('d/m/Y H:i:s') }}
                                             </td>
                                             <td>
-                                                <a href="{{ route('system_admin.menus.edit', ['id' => $menu->id]) }}"
+                                                <a href="{{ route('system_admin.menu.edit', ['id' => $menu->id]) }}"
                                                     class="btn btn-icon btn-sm btn-warning tip">
                                                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                                 </a>
@@ -152,13 +148,13 @@
         $(document).ready(function() {
             $('.deleteDialog').on('click', function() {
                 var post_id = $(this).attr('data-id');
-                destroy(post_id, '{{ route('system_admin.menus.destroy') }}',
-                    '{{ route('system_admin.menus.index') }}', "Bạn muốn xóa bài đăng này!");
+                destroy(post_id, '{{ route('system_admin.menu.destroy') }}',
+                    '{{ route('system_admin.menu.index') }}', "Bạn muốn xóa bài đăng này!");
             });
         });
         $('.grid-batch-0').on('click', function() {
-            destroyAll('{{ route('system_admin.menus.destroyAll') }}',
-                '{{ route('system_admin.menus.index') }}', "Bạn muốn xóa các bài đăng đã chọn?");
+            destroyAll('{{ route('system_admin.menu.destroyAll') }}',
+                '{{ route('system_admin.menu.index') }}', "Bạn muốn xóa các bài đăng đã chọn?");
         });
 
         $('.grid-refresh').click(function() {

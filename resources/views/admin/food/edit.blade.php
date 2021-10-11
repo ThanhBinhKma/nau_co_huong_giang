@@ -80,33 +80,10 @@
                                     </select>
                                 </div>
 
-                                <div class="d-flex-add-food">
-                                    <a href="javascript:void(0)" class="btn btn-primary btn-add-food">Thêm món mới</a>
-                                </div>
+
                             </div>
 
-                            @foreach ($food->subfoods as $key => $subfood)
-                                <div class="tab-pane active show border-tab-pane div-{{ $key }}" id="tab_detail">
-                                    <a href="javascript:void(0)" class=" deleteImgSubFood" key-button="{{ $key }}" data-id="{{ $subfood->id }}"><i
-                                            class="fa fa-times"></i></a>
-                                    <div class="form-group">
-                                        <label for="" class="control-label required">Tên Món</label>
-                                        <input type="text" class="form-control" data-counter="120"
-                                            value="{{ $subfood->name }}">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="" class="control-label required">Ảnh Món</label>
-                                        {{-- <input type="file" class="form-control" data-counter="120"
-                                            value="{{ $subfood->image }}"> --}}
-                                        <img src="{{ asset('images/' . $subfood->image) }}" alt="" height="150px"
-                                            width="150px" style="object-fit: cover">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="" class="control-label required">Mô tả</label>
-                                        <textarea class="form-control" name="description[]" rows="4">{{ $subfood->description }}</textarea>
-                                    </div>
-                                </div>
-                            @endforeach
+
                         </div><!-- end.tab-content -->
                     </div>
                 </div>
@@ -123,6 +100,44 @@
                                 <button type="submit" name="submit" value="apply" class="btn btn-success">
                                     <i class="fa fa-check-circle"></i> Lưu và Sửa
                                 </button>
+                            </div>
+                        </div>
+                        <div class="widget meta-boxes">
+                            <div class="widget-title">
+                                <h4><label for="image" class="control-label">Hình ảnh</label></h4>
+                            </div>
+                            <div class="widget-body">
+                                <div class="image-box">
+                                    @if ($food->image)
+                                        <input id="thumbnail" type="hidden" name="thumbnail" value="{{ $food->image }}"
+                                            class="image-data">
+                                        <div class="preview-image-wrapper ">
+                                            <img id="holder" class="preview_image" src="{{ $food->image }}" type="text"
+                                                name="filepath" alt="preview image">
+                                            <a class="btn_remove_image" title="Xoá ảnh">
+                                                <i class="fa fa-times"></i>
+                                            </a>
+                                        </div>
+                                    @else
+                                        <input id="thumbnail" type="hidden" name="thumbnail" value="" class="image-data">
+                                        <div class="preview-image-wrapper ">
+                                            <img id="holder" class="preview_image" src="{{ asset('images/placeholder.png') }}"
+                                                type="text" name="filepath" alt="preview image">
+                                            <a class="btn_remove_image" title="Xoá ảnh">
+                                                <i class="fa fa-times"></i>
+                                            </a>
+                                        </div>
+                                    @endif
+
+                                    <div class="image-box-actions">
+                                        <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
+                                            <i class="fa fa-picture-o"></i> Chọn hình ảnh
+                                        </a>
+                                    </div>
+                                    @if ($errors->first('thumbnail'))
+                                        <div class="error">{{ $errors->first('thumbnail') }}</div>
+                                    @endif
+                                </div>
                             </div>
                         </div>
                     </div>

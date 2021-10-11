@@ -13,19 +13,19 @@
                 <h2 class="">Thông tin</h2>
                 <ul>
                     <li>
-                        <a href="">Giới thiệu</a>
+                        <a href="{{route('client.about')}}">Giới thiệu</a>
                     </li>
                     <li>
-                        <a href="">Món mới & khuyến mãi</a>
+                        <a href="{{route('client.deliciou_foods')}}">Món mới & khuyến mãi</a>
                     </li>
                     <li>
-                        <a href="">Liên hệ</a>
+                        <a href="{{route('client.contact')}}">Liên hệ</a>
                     </li>
                     <li>
                         Kết nối trên
                         <ul class="mt-2">
                             <li class="header-nav-list-contact">
-                                    <a href=""><i class="fa fa-phone"></i></a>
+                                    <a href="tel:0975364865"><i class="fa fa-phone"></i></a>
 
                             </li>
                             <li class="header-nav-list-contact">

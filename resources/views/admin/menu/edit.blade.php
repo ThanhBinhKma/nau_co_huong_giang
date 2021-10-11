@@ -4,7 +4,7 @@
     <section class="content">
         {{-- {{ Breadcrumbs::render('addpage') }} --}}
         <div class="clearfix"></div>
-        <form method="POST" action="{{ route('system_admin.menus.update', ['id' => $menu->id]) }}">
+        <form method="POST" action="{{ route('system_admin.menu.update', ['id' => $menu->id]) }}">
             {{ csrf_field() }}
             @if ($errors->all())
                 <div class="note note-danger">
@@ -27,19 +27,9 @@
                             <div class="tab-pane active show" id="tab_detail">
                                 <div class="form-group">
                                     <label for="title" class="control-label required">Tên</label>
-                                    <input class="form-control" placeholder="Nhập tên trang" data-counter="120" name="title"
-                                        type="text" id="title" value="{{ $menu->name }}">
-                                    @if ($errors->first('title'))
-                                        <div class="error">{{ $errors->first('title') }}</div>
-                                    @endif
-                                </div>
-                                <div class="form-group">
-                                    <label for="title" class="control-label required">Nội dung</label>
-                                    <textarea class="form-control" cols="30" rows="10"
-                                        name="description">{{ $menu->description }}</textarea>
-                                    @if ($errors->first('title'))
-                                        <div class="error">{{ $errors->first('title') }}</div>
-                                    @endif
+                                    <textarea id="content" name="content" cols="80" rows="10">
+                                        {{ $menu->description }}
+                                    </textarea>
                                 </div>
 
                             </div>

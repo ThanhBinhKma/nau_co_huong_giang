@@ -97,7 +97,10 @@
     <script src="https://cdn.ckeditor.com/4.13.0/standard/ckeditor.js"></script>
     <script src="vendor/laravel-filemanager/js/stand-alone-button.js"></script>
     <script>
-        CKEDITOR.replace('content', options);
+        CKEDITOR.replace('content', {
+        filebrowserUploadUrl: "{{route('system_admin.ckeditor.upload', ['_token' => csrf_token() ])}}",
+        filebrowserUploadMethod: 'form'
+    });
     </script>
 
 

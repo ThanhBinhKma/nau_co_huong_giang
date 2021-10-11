@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Client;
 use App\Http\Controllers\Controller;
 use App\Models\Menu;
 use App\Models\Food;
+use App\Models\FoodType;
+use App\Models\Service;
 use App\Models\SubFood;
 use Illuminate\Http\Request;
 
@@ -12,8 +14,9 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $foods = SubFood::inRandomOrder()->limit(4)->get();
-        return view('client.index')->with(['foods' => $foods]);
+        $food_types = FoodType::all();
+        $foods = Food::all();
+        return view('client.index')->with(['foods' => $foods, 'food_types' => $food_types]);
     }
 
     public function about()
@@ -21,17 +24,17 @@ class HomeController extends Controller
         return view('client.about');
     }
 
-    public function menu($slug)
+    public function menu()
     {
-        $menu = Menu::where('slug', $slug)->first();
-        $foods = Food::where('menu_id', 2)->get();
-        return view('client.menu')->with(['menu' => $menu, 'foods' => $foods]);
+        return view('client.menu');
     }
 
-    public function service()
+    public function service($id)
     {
+        $service  = Service::find($id);
 
-        return view('client.service');
+        return view('client.service')->with(['service' => $service]);
+        ;
     }
 
     public function contact()
@@ -41,6 +44,7 @@ class HomeController extends Controller
 
     public function deliciousFoods()
     {
-        return view('client.deliciousFoods');
+        $foods = Food::all();
+        return view('client.delicious_foods')->with(['foods' => $foods]);
     }
 }

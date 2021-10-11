@@ -43,30 +43,46 @@
             </a>
             </li>
             @php
-                $arg_staff = ['system_admin.menus.index', 'system_admin.menus.create', 'system_admin.menus.store', 'system_admin.menus.edit'];
+                $arg_staff = ['system_admin.food_type.index', 'system_admin.food_type.create', 'system_admin.food_type.store', 'system_admin.food_type.edit'];
             @endphp
             @if (in_array($name, $arg_staff))
                 <li class="active">
                 @else
                 <li>
             @endif
-            <a href="{{ route('system_admin.menus.index') }}">
-                <i class="fa fa-database" aria-hidden="true"></i> <span>Thực đơn cỗ</span>
+            <a href="{{ route('system_admin.food_type.index') }}">
+                <i class="fa fa-database" aria-hidden="true"></i> <span>Kiểu món</span>
             </a>
             </li>
-
             @php
-                $arg_staff = ['system_admin.foods.index', 'system_admin.foods.create', 'system_admin.foods.store', 'system_admin.foods.edit'];
-            @endphp
+            $arg_staff = ['system_admin.foods.index', 'system_admin.foods.create', 'system_admin.foods.store', 'system_admin.foods.edit'];
+        @endphp
             @if (in_array($name, $arg_staff))
-                <li class="active">
-                @else
-                <li>
-            @endif
-            <a href="{{ route('system_admin.foods.index') }}">
-                <i class="fa fa-database" aria-hidden="true"></i> <span>Các món</span>
-            </a>
-            </li>
+            <li class="active">
+            @else
+            <li>
+        @endif
+        <a href="{{ route('system_admin.foods.index') }}">
+            <i class="fa fa-database" aria-hidden="true"></i> <span>Món ăn</span>
+        </a>
+        </li>
+
+        @php
+            $arg_staff = ['system_admin.menu.index', 'system_admin.menu.create', 'system_admin.menu.store', 'system_admin.menu.edit'];
+        @endphp
+            @if (in_array($name, $arg_staff))
+            <li class="active">
+            @else
+            <li>
+        @endif
+        <a href="{{ route('system_admin.menu.index') }}">
+            <i class="fa fa-database" aria-hidden="true"></i> <span>Thực đơn</span>
+        </a>
+        </li>
+
+
+
+
         </ul>
     </section>
     <!-- /.sidebar -->

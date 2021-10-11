@@ -32,8 +32,16 @@
             @yield('content')
         </div>
         @include('client.layouts.footer')
+
     </div>
 
+    <div class="phonering-alo-phone phonering-alo-green phonering-alo-show" id="phonering-alo-phoneIcon">
+        <div class="phonering-alo-ph-circle"></div>
+         <div class="phonering-alo-ph-circle-fill"></div>
+        <a href="tel:+84975364865" class="pps-btn-img" title="Liên hệ">
+         <div class="phonering-alo-ph-img-circle"></div>
+         </a>
+        </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     </script>

@@ -42,15 +42,7 @@
             </div>
             <div class="col-12 text-center text-title-index">
                 <h2 style="text-transform: uppercase">Thực đơn</h2>
-                <div>
-                    <img src="{{ asset('images/menu/167033284_444944423437999_3398161135937188365_n.jpg') }}" alt="">
-                </div>
-                <div>
-                    <img src="{{ asset('images/menu/22.jpg') }}" alt="">
-                </div>
-                <div>
-                    <img src="{{ asset('images/menu/th1.jpg') }}" alt="">
-                </div>
+                {!! $menu->description !!}
             </div>
         </div>
 

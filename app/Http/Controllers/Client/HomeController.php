@@ -26,7 +26,8 @@ class HomeController extends Controller
 
     public function menu()
     {
-        return view('client.menu');
+        $menu = Menu::first();
+        return view('client.menu')->with(['menu' => $menu]);
     }
 
     public function service($id)

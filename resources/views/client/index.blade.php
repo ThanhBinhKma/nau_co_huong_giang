@@ -221,7 +221,7 @@
                             <div class="tab-pane fade map-headquarters" id="food_{{ $food_type->id }}" role="tabpanel" aria-labelledby="food_h_{{ $food_type->id }}">
                                 @endif
                                 <div class="row">
-                                    @foreach ($foods as $ke => $food)
+                                    @foreach ($food_type->foods as $ke => $food)
                                         @if ($food->food_type === $food_type->id)
                                             @if ($ke%2!=0)
                                             <div class="col-12 col-md-6 col-lg-6 col-xl-6 dish-list rv-row">

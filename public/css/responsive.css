@@ -185,8 +185,11 @@
     .phonering-alo-ph-img-circle {
         left:20px;
     }
-    .phonering-alo-ph-circle-fill,.phonering-alo-ph-circle {
+    .phonering-alo-ph-circle-fill {
         left:0;
+    }
+    .phonering-alo-ph-circle {
+        left:-30px;
     }
 }
 

@@ -35,7 +35,7 @@
         </div>
         <div class="row list-img-service">
             @foreach ($foods as $food)
-            <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-3 img-delicious">
+            <div class="col-6 col-md-4 col-lg-4 col-xl-3 mb-3 img-delicious">
                 <img src="{{  $food->image  }}" alt="">
                 <p>{{ $food->name }}</p>
             </div>

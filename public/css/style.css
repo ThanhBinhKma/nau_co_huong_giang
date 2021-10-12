@@ -1156,9 +1156,16 @@ header.display-mobile {
 .img-delicious a {
     border: 1px solid #f5a60d;
     justify-content: center;
-    margin: auto;
-    display: block;
-    width: 40%;
+    margin: 0 auto;
+    /* display: inline-block; */
+    /* align-items: center; */
+    /* width: 40%; */
     color: #000;
     margin-bottom: 20px;
+    /* text-align: center; */
+    /* text-align: center; */
+    transform: (-50%,50%);
+    transform: translate(100%, -50%);
+    /* position: absolute; */
+    margin-top: 20px;
 }

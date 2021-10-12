@@ -190,7 +190,10 @@
     }
     .phonering-alo-ph-circle {
         left:-30px;
-    }
+        }
+        .img-delicious a {
+            transform: translate(90%, -50%);
+        }
 }
 
 @media (max-width: 480px) {

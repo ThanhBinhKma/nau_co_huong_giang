@@ -49,12 +49,12 @@
 
             <br>
 
-            - Giá thành vừa túi tiền, không đắt không rẻ, khách không bị hớ, Hoàng Yến không bị lỗ.
+            - Giá thành vừa túi tiền, không đắt không rẻ, khách không bị hớ, Hương Giang không bị lỗ.
 
         </p>
         <img src="{{ asset('images/gioithieu.jpg') }}" alt="">
         <p class="mt-4">
-            Gia đình bạn đang cần thuê dịch vụ nấu cỗ tại nhà, gọi ngay Hoàng Yến để chúng tôi tư vấn menu và giúp bạn
+            Gia đình bạn đang cần thuê dịch vụ nấu cỗ tại nhà, gọi ngay Hương Giang để chúng tôi tư vấn menu và giúp bạn
             có một bữa cỗ tuyệt vời để thay bạn phục vụ những vị khách của mình.
             <br>
             Thực đơn đa dạng từ các nguyên liệu sạch sẽ, tươi ngon. Từ các món ăn “đất liền” như chim, gà, lợn, bò cho

@@ -25,27 +25,6 @@
         </div>
     </div>
 </div>
-<div style="background-color: #e4d8c9" class="mt-4">
-    <div class="container">
-        <div class="row intro-service">
-            <div class="col-xl-4 col-4 col-lg-4 col-sm-4">
-                <div>
-                    <img src="{{ asset('img/icon_table.png') }}" alt="">
-                </div>
-            </div>
-            <div class="col-xl-4 col-4 col-lg-4 col-sm-4 text-center">
-                <div>
-                    <img src="{{ asset('img/icon_catering.png') }}" alt="">
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-4 col-sm-4 text-right">
-                <div>
-                    <img src="{{ asset('img/icon_waitress.png') }}" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="container mt-4">
     <div class="row">
@@ -329,7 +308,7 @@
                             </div>
                             <div class="owl-carousel owl-theme text-center">
                                 <div class="item sub-item-feedback text-center">
-                                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="wpx-100 img-round mgb-20" title="" alt="" data-edit="false" data-editor="field" data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]">
+                                    <img src="{{ asset('images/vn.png') }}" class="wpx-100 img-round mgb-20" title="" alt="" data-edit="false" data-editor="field" data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]">
                                     <p class="fs-110 font-cond-l" contenteditable="false">" Sed ut perspiciatis unde omnis iste
                                         natus
                                         error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.

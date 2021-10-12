@@ -45,9 +45,9 @@
         </div>
         <div class="row contact-footer">
             <div class="col-md-12">
-                <p>195B Đội Cấn - Ba Đình - Hà Nội</p>
-                <p>Email: info@29foods.com - Hotline 0984 000 059-0243 825 29 29</p>
-                <span>Bản quyền © 2021 nauco29.com . Mọi quyền được bảo lưu</span>
+                <p>34/41 ngõ 210 Đội Cấn - Ba Đình - Hà Nội</p>
+                <p>Hotline 0975 364 865 - 0978 366 258</p>
+                <span>Bản quyền © 2021 naucohuonggiang.com . Mọi quyền được bảo lưu</span>
             </div>
         </div>
 </footer>

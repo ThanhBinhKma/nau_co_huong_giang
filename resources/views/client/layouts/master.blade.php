@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
-
+    <title>Trang chủ - Dịch vụ nấu cỗ Hương Giang</title>
+    <link rel="icon" href="{{ asset('images/cropped-1060134560-shutterstock_1060134560-e1621501058161-32x32.png') }}">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('font/Montserrat-Medium.ttf') }}">

@@ -38,6 +38,7 @@
             <div class="col-6 col-md-4 col-lg-4 col-xl-3 mb-3 img-delicious">
                 <img src="{{  $food->image  }}" alt="">
                 <p>{{ $food->name }}</p>
+                <a href="tel:0975364865" class="btn">Đặt món</a>
             </div>
             @endforeach
         </div>

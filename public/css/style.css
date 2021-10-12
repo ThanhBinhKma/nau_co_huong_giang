@@ -1153,3 +1153,12 @@ header.display-mobile {
     margin-top: 10px;
     color: #f5a60d;
 }
+.img-delicious a {
+    border: 1px solid #f5a60d;
+    justify-content: center;
+    margin: auto;
+    display: block;
+    width: 40%;
+    color: #000;
+    margin-bottom: 20px;
+}

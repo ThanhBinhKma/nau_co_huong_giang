@@ -99,17 +99,16 @@
                                                 {{ $menu->id }}
                                             </td>
                                             <td>
-                                                <a class="text-left" href=""
-                                                    title="{{ $menu->name }}">{{ $menu->name }}</a>
+                                                <img height="150px" width="150px" src="{{ asset($menu->description) }}" alt="">
 
                                             </td>
                                             <td> {{ \Carbon\Carbon::parse($menu->created_at)->format('d/m/Y H:i:s') }}
                                             </td>
                                             <td>
-                                                <a href="{{ route('system_admin.menu.edit', ['id' => $menu->id]) }}"
+                                                <!-- <a href="{{ route('system_admin.menu.edit', ['id' => $menu->id]) }}"
                                                     class="btn btn-icon btn-sm btn-warning tip">
                                                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                                </a>
+                                                </a> -->
                                                 <a href="http://darianculbert.com/blog/32/le-hoi-nguoi-cham"
                                                     class="btn btn-icon btn-sm btn-primary tip">
                                                     <i class="fa fa-eye"></i>

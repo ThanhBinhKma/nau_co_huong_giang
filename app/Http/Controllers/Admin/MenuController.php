@@ -24,7 +24,7 @@ class MenuController extends Controller
     public function store(Request $request)
     {
         $menu = new Menu();
-        $menu->description = $request->content;
+        $menu->description = $request->thumbnail;
         $menu->save();
         return redirect()->route('system_admin.menu.index');
     }

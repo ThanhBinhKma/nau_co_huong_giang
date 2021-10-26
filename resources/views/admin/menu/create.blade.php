@@ -23,15 +23,7 @@
                                 <a href="#tab_detail" class="nav-link active show" data-toggle="tab">Chi tiết trang</a>
                             </li>
                         </ul><!-- end.nav-tabs -->
-                        <div class="tab-content">
-                            <div class="tab-pane active show" id="tab_detail">
-                                <div class="form-group">
-                                    <label for="title" class="control-label required">Mô tả</label>
-                                    <textarea id="content" name="content" cols="80" rows="10">
-                                    </textarea>
-                                </div>
-                            </div>
-                        </div><!-- end.tab-content -->
+
                     </div>
                 </div>
                 <div class="col-md-3 right-sidebar">
@@ -62,6 +54,32 @@
                                 </select>
                                 @if ($errors->first('status'))
                                     <div class="error">{{ $errors->first('status') }}</div>
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="widget meta-boxes">
+                        <div class="widget-title">
+                            <h4><label for="image" class="control-label">Hình ảnh</label></h4>
+                        </div>
+                        <div class="widget-body">
+                            <div class="image-box">
+                                <input id="thumbnail" type="hidden" name="thumbnail" value="" class="image-data">
+                                <div class="preview-image-wrapper ">
+                                    <img id="holder" class="preview_image" src="{{ asset('images/placeholder.png') }}"
+                                        type="text" name="filepath" alt="preview image">
+                                    <a class="btn_remove_image" title="Xoá ảnh">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                                <div class="image-box-actions">
+                                    <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
+                                        <i class="fa fa-picture-o"></i> Chọn hình ảnh
+                                    </a>
+                                </div>
+                                @if ($errors->first('thumbnail'))
+                                    <div class="error">{{ $errors->first('thumbnail') }}</div>
                                 @endif
                             </div>
                         </div>

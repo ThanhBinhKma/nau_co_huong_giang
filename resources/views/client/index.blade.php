@@ -203,7 +203,7 @@
                                     @foreach ($food_type->foods as $ke => $food)
                                         @if ($food->food_type === $food_type->id)
                                             @if ($ke%2!=0)
-                                            <div class="col-12 col-md-6 col-lg-6 col-xl-6 dish-list rv-row">
+                                            <div class="col-12 col-md-6 col-lg-6 col-xl-6 dish-list rv-row  animate__animated animate__backInLeft">
                                                 <div class="img-show-dish">
                                                     <img src="{{  $food->image }}" alt="">
                                                 </div>
@@ -218,7 +218,7 @@
                                                 </div>
                                             </div>
                                             @else
-                                            <div class="col-12 col-md-6 col-lg-6 col-xl-6 dish-list">
+                                            <div class="col-12 col-md-6 col-lg-6 col-xl-6 dish-list animate__animated animate__backInRight">
                                                 <div class="img-show-dish">
                                                     <img src="{{  $food->image}}" alt="">
                                                 </div>

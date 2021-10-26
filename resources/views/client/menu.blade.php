@@ -42,7 +42,13 @@
             </div>
             <div class="col-12 text-center text-title-index">
                 <h2 style="text-transform: uppercase">Thực đơn</h2>
-                {!! $menu->description !!}
+                <div class="row">
+                    @foreach($menus as $menu)
+                    <div class="col-12 col-xs-6 col-md-4 col-xl-4 col-lg-4 mt-4">
+                        <img src="{{ asset($menu->description) }}" class="" alt="">
+                    </div>
+                    @endforeach
+                </div>
             </div>
         </div>
 
